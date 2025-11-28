@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype Layout</title>
+  <link rel="stylesheet" href="bottommydeisavior.css" />
+</head>
+<body>
+  <div class="wrapper" style="width: 70%; max-width: 1000px; margin: 100px auto; background: #fffdfb; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); overflow: visible;">
+
+
+  <!-- Top Navigation -->
+  <div class="navbar">
+    <a href="index.html">PROFILE</a>
+    <a href="SWOT.html">LIFE VALUES</a>
+    <a href="WORKS.html">PORTFOLIO</a>
+    <a href="SOCIALS.html">CONNECT</a>
+  </div>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+   <div class="sidebar">
+    <div class="pfp">  <img src="pfp.jpg" alt="Profile Picture" style="width: 100%; height: 100%; border-radius: 50%; border-color: #8aa88d; border-style: solid;" />
+    </div>
+      <div class="more-wrapper">
+         <button onclick="toggleSubmenu(this)" class="more-btn">ORIGINAL ILLUSTRATIONS</button>
+         <div class="submenu">
+              <button onclick="showTab('trad')">TRADITIONAL</button>
+              <button onclick="showTab('dig')">DIGITAL</button>
+          </div>
+        </div>
+        <div class="more-wrapper">
+            <button onclick="toggleSubmenu(this)" class="more-btn">FANARTS</button>
+            <div class="submenu">
+                <button onclick="showTab('traditional')">TRADITIONAL</button>
+                <button onclick="showTab('digital')">DIGITAL</button>
+            </div>
+        </div>
+        <button onclick="showTab('animations')">ANIMATIONS</button>
+        <div class="more-wrapper">
+            <button onclick="toggleSubmenu(this)" class="more-btn">OTHER NOTABLE WORKS</button>
+            <div class="submenu">
+                <button onclick="showTab('crochet')">CROCHET PRODUCTS</button>
+                <button onclick="showTab('crafts')">ACHIEVEMENTS</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div id="welcome">
+        </div>
+
+
+    <div id="illustrations" style="display:none;">
+    </div>
+
+    <div id="fanarts" style="display:none;">
+    </div>
+
+    <div id="animations" style="display:none;">
+      <div class="image-container">
+        <img src="Tetogif.gif" alt="Sample Animation" style="max-width: 60%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+    </div>
+
+    <div id="crochet" style="display:none;">
+        <div class="image-container">
+            <img src="sunflwr bq crochet.jpg" alt="Crochet Product 1" style="max-width: 60%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+    </div>
+    
+    <div id="crafts" style="display:none;">
+        <h1 style="font-size: 30px;">ACHIEVEMENTS</h1>
+        <p>TESDA National Certificate III in Visual Graphic Designing (2024)</p>
+</div>
+</div>
+</div>
+</body>
+<script src="topwhinysamoyedphainon.js"></script>
+</html>

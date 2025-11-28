@@ -1,0 +1,160 @@
+    body {
+        background-image: url("bg.jpg");
+      background-size: cover;
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+
+    }
+    /* Top Navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      background: #A0A786;
+      padding: 1rem 2rem;
+      color: white;
+      font-weight: bold;
+      gap: 3rem;
+    }
+
+    .navbar a {
+      color: rgb(217, 234, 220);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .navbar a:hover {
+      background: rgba(81, 101, 76, 0.874);
+    }
+
+    /* Main layout */
+    .container {
+      display: flex;
+      align-items: flex-start;
+      padding: 2rem;
+      gap: 20px;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 220px;
+      min-width: 220px;
+      flex-shrink: 0;
+      background: rgb(255, 255, 255);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+       display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pfp {
+      width: 150px;
+      height: 150px;
+      background: #e4e1e1;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;;
+    }
+
+    .sidebar button {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.4rem 0;
+      border: none;
+      border-radius: 6px;
+      background: #c9ccc0;
+      color: rgb(139, 191, 131);
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    /* Main Content */
+    .content {
+      flex-grow: 1;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .content h1 {
+      margin-top: 0;
+      flex: 1;
+    }
+    
+    p {
+  text-align: justify;
+  text-indent: 30px;
+}
+
+.more-wrapper {
+    position: relative;
+}
+
+/* SubmenuPanel */
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%; /* appears to the RIGHT */
+    width: 300px;
+    background: #A0A786;
+    border: 5px solid #4c4f3e;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    display: none;                     /* hidden by default */
+    overflow: hidden;
+    z-index: 200;
+}
+
+/* Show the submenu on hover */
+.more-wrapper:hover .submenu {
+    display: block;
+}
+
+/* Each submenu item */
+.submenu-item {
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 2px solid #A0A786;
+    color: #000000;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.submenu-item:last-child {
+    border-bottom: none;
+}
+
+.submenu-item:hover {
+    background: #A0A786;
+    padding-left: 28px;
+}
+
+/* MAIN SIDEBAR BUTTON STYLE (same as before) */
+.sidebar button {
+    background: #A0A786;; /* BUTTON COLORMEOW  */
+    border: none;
+    width: 100%;
+    padding: 24px 20px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;       /* text color for contrast */
+    border-bottom: 2px solid #A0A786; /* darker green border */
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.sidebar button:hover {
+    background: #7c8268; /* darker green on hover */
+    padding-left: 28px;
+}
+

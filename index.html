@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype Layout</title>
+  <link rel="stylesheet" href="bottommydeisavior.css" />
+</head>
+<body>
+  <div class="wrapper" style="width: 70%; max-width: 1000px; margin: 100px auto; background: #fffdfb; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); overflow: visible;">
+
+
+  <!-- Top Navigation -->
+  <div class="navbar">
+    <a href="index.html">PROFILE</a>
+    <a href="SWOT.html">LIFE VALUES</a>
+    <a href="WORKS.html">PORTFOLIO</a>
+    <a href="SOCIALS.html">CONNECT</a>
+  </div>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+   <div class="sidebar">
+    <div class="pfp">
+        <img src="pfp.jpg" alt="Profile Picture" style="width: 100%; height: 100%; border-radius: 50%; border-color: #8aa88d; border-style: solid;" />
+    </div>
+        <button onclick="showTab('about')">ABOUT ME</button>
+        <button onclick="showTab('personalinfo')">PERSONAL INFORMATION</button>
+        <button onclick="showTab('education')">EDUCATION</button>
+        <div class="more-wrapper">
+            <button onclick="toggleSubmenu(this)" class="more-btn">MORE ABOUT ME</button>
+            <div class="submenu">
+                <button onclick="showTab('interest')">INTERESTS</button>
+                <button onclick="showTab('funfacts')">FUNFACTS</button>
+                <button onclick="showTab('faqs')">FAQS</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div id="welcome">
+            <h1 style="font-size: 30px;">HELLO! ꉂ(˵˃ ᗜ ˂˵)</h1>
+            <p style="text-indent: 30px;">I’m Yezabiee, Yeza for short, and I also sometimes go by Lihellohi! I still can’t self proclaim myself as one, but I am an Illustrator, a Fan Artist, and a Designer. I mainly do traditional arts and crafts, but I also do digital arts from time to time.</p> 
+            <p>I have a very chaotic and messy mind full of creative headcanons, stories, and ideas I want to fully interpret and share with others. I may not be the brightest person in the room, but  I am somewhat insightful as I have a habit of carefully observing and judging my surroundings, so I may give advice based on what I experienced or observed on others. </p>
+            <p>I’ll say I don’t do as much drawing as I used to, more like I just do little doodles of my favs here and there ;-; That’s why I am mainly focused on my general stuff like school work or life situations. So please treat me with care!(‘. • ᵕ •. `)</p>
+        </div>
+
+
+    <div id="about" style="display:none;">
+        <h1 style="font-size: 30px;">HELLO! ꉂ(˵˃ ᗜ ˂˵)</h1>
+        <p style="text-indent: 30px;"> I’m Yezabiee, Yeza for short, and I also sometimes go by Lihellohi! I still can’t self proclaim myself as one, but I am an Illustrator, a Fan Artist, and a Designer. I mainly do traditional arts and crafts, but I also do digital arts from time to time.</p> 
+        <p>I have a very chaotic and messy mind full of creative headcanons, stories, and ideas I want to fully interpret and share with others. I may not be the brightest person in the room, but  I am somewhat insightful as I have a habit of carefully observing and judging my surroundings, so I may give advice based on what I experienced or observed on others. </p>
+        <p>I’ll say I don’t do as much drawing as I used to, more like I just do little doodles of my favs here and there ;-; That’s why I am mainly focused on my general stuff like school work or life situations. So please treat me with care!(‘. • ᵕ •. `)</p>
+    </div>
+
+    <div id="personalinfo" style="display:none;">
+        <h1 style="font-size: 30px;">PERSONAL INFORMATION</h1>
+        <ul>
+            <li>Preferred Name: Yeza</li>
+            <li>Birthdate: June 17th</li>
+            <li>Nationality: Filipino</li>
+            <li>Pronouns: She/They</li>
+            <li>Sexuality: Asexual, Bisexual(?)</li>
+            <li>MBTI: ISFP</li>
+        </ul>
+    </div>
+
+    <div id="education" style="display:none;">
+        <h1 style="font-size: 30px;">EDUCATIONAL BACKGROUND</h1>
+         <h2 style="font-size: 20px">CIIT College of Arts and Technology (2025-Present)</h2>
+            <ul>
+                <li>Member of Atelier: CIIT Organization about Traditional Arts</li>
+            </ul>
+        <h2 style="font-size: 20px">Leandro Locsin Integrated School (2023-2025)</h2>
+         <ul>
+            <li>Consistent Honors (2023-2024)</li>
+            <li>Team Leader: Artist Guild Painting Contest (2023)</li>
+            <li>2nd Place: Artist Guild Painting Contest (2023)</li>
+            <li>1st Place: English Month Poster Making Contest (2024)</li>
+            <li>Intern: JVD Event and Travel Management Co. (2024)</li>
+            <li>Champion: Classroom Decoration Event: United Nations Theme:Egypt (2024)</li>
+            <li>Champion: Classroom Decoration Event: Christmas Theme (2024)</li>
+            <li>Guhit ICT: Highest Ranking Sales from the ICT strand on the Foundation Day Event (2025)</li>
+            <li>1st Place: Geogebra Arts (2025)</li>
+        </ul>
+    </div>
+
+    <div id="interest" style="display:none;">
+        <h1 style="font-size: 30px;">INTERESTS</h1>
+        <h2 style="font-size: 20px">Main Hyperfixations</h2>
+        <h2 style="font-size: 20px">Secondary Hyperfixations</h2>
+        <h2 style="font-size: 20px">Occasional Hyperfixations</h2>
+        <p>Hypnosis Microphone, Horimiya, Vocaloid, Undertale, Deltarune, Gravity Falls, Steven Universe, Doki Doki Literature Club</p>
+    </div>
+
+    <div id="funfacts" style="display:none;">
+        <h1 style="font-size: 30px;">FUNFACTS</h1>
+        <ul>
+            <li>I crochet.</li>
+            <li>I might be a bookworm but I am picky with the books I read.</li>
+            <li>I don’t post a lot on social media, I am more of a lurker.</li>
+            <li>I can animate but can’t proclaim myself as an animator.</li>
+            <li>The only time I got into a university is when I was in elementary.</li>
+            <li>I got placed as a leader on my research related subjects 4 times during 12th Grade, so I guess I am good with researching and brainstorming.</li>
+            <li>My artstyle changes a lot, like every few months or so.</li>
+            <li>I'm a night owl.</li>
+            <li>I have some experience with AutoCAD.</li>
+            <li>I have experience with Journalism.</li>
+        </ul>
+    </div>
+
+    <div id="faqs" style="display:none;">
+        <h1 style="font-size: 30px;">FAQS</h1>
+        <h2 style="font-size: 20px;">What is your dream in 5 years or so?</h2>
+        <p>To be the better version than myself today, passionate and determined in everything.....Also be rich. Merch is not cheap.</p>
+        <h2 style="font-size: 20px;">What software/device do you usually use for digital art?</h2>
+        <p>I use Ibis Paint on my phone. Yes, I draw with my fingers. Yes I am struggling.</p>
+        <h2 style="font-size: 20px;">Will you open art commissions?</h2>
+        <p>Maybe, I'll think about it.</p>
+        <h2 style="font-size: 20px;">Do you sell your crochet products?</h2>
+        <p>I did sell sometime this year, and planning to sell more in the future!</p>
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script src="topwhinysamoyedphainon.js"></script>
+</html>

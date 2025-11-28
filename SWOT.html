@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype Layout</title>
+  <link rel="stylesheet" href="bottommydeisavior.css" />
+</head>
+<body>
+  <div class="wrapper" style="width: 70%; max-width: 1000px; margin: 100px auto; background: #fffdfb; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); overflow: visible;">
+
+
+  <!-- Top Navigation -->
+  <div class="navbar">
+    <a href="index.html">PROFILE</a>
+    <a href="SWOT.html">LIFE VALUES</a>
+    <a href="WORKS.html">PORTFOLIO</a>
+    <a href="SOCIALS.html">CONNECT</a>
+  </div>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+   <div class="sidebar">
+    <div class="pfp">  <img src="pfp.jpg" alt="Profile Picture" style="width: 100%; height: 100%; border-radius: 50%; border-color: #8aa88d; border-style: solid;" />
+    </div>
+        <button onclick="showTab('life')">LIFE MISSION & VISION</button>
+        <div class="more-wrapper">
+            <button onclick="toggleSubmenu(this)" class="more-btn">PERSONAL DEVELOPMENT</button>
+            <div class="submenu">
+                <button onclick="showTab('personality')">PERSONALITY TEST</button>
+                <button onclick="showTab('character')">CHARACTER STRENGTHS</button>
+                <button onclick="showTab('learning')">LEARNING STYLE</button>
+            </div>
+        </div>
+        <div class="more-wrapper">
+            <button onclick="toggleSubmenu(this)" class="more-btn">FUTURE PLANS</button>
+             <div class="submenu">
+                <button onclick="showTab('goals')">GOALS</button>
+                <button onclick="showTab('growth')">GROWTH</button>
+            </div>
+        </div>
+        <button onclick="showTab('values')">PERSONAL VALUES</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div id="welcome">
+            <h1 style="font-size: 30px;">MISSION</h1>
+                <p></p>
+            <h2 style="font-size: 30px;">VISION</h2>
+                s<p></p>
+        </div>
+
+
+    <div id="life" style="display:none;">
+         <h1 style="font-size: 30px;">MISSION</h1>
+            <p>N/A</p>
+        <h2 style="font-size: 30px;">VISION</h2>
+            <p>N/A</p>
+    </div>
+
+    <div id="personality" style="display:none;">
+        <h1 style="font-size: 30px;">PERSONALITY TEST</h1>
+        <h2 style="font-size: 20px;">Openness to Experience: 2.70</h2>
+        <p>I am having a hard time to actually think originally when it comes to ideas, so I need a little help with other existing ideas to be able to come up with my own.</p>
+        <h2 style="font-size: 20px;">Conscientiousness: 3.56</h2>
+        <p>I’ll say I am reliable  and conscious with my work, but I still tend to procrastinate at times. </p>
+        <h2 style="font-size: 20px;">Extraversion: 4.00</h2>
+        <p>I am very good at voicing my concerns when it comes to groupworks. Personally I don’t fit this score as I am not an extrovert, but when it comes to groupwork, especially when I’m the leader, I am the loudest in voicing my concerns and achievements as a group.</p>
+        <h2 style="font-size: 20px;">Agreeableness: 2.67</h2>
+        <p>When it comes to agreeing with certain subjects, my words tend to be very harsh and very critical, not only to anyone but also myself.</p>
+        <h2 style="font-size: 20px;">Neuroticism/Negative Emotionality: 1.75</h2>
+        <p>Even when times are getting rough, I can still maintain calm in order not to panic. </p>
+    </div>
+
+    <div id="character" style="display:none;">
+        <h1>CHARACTER STRENGTHS</h1>
+        <h2 style="font-size: 15px;">Appreciation of Beauty & Excellence</h2>
+        <p>I appreciate anything that has beauty, excellence, whether physically or within their skills. Appreciating the beauty of anything, living or non living, gives me the courage that I too, can create something beautiful as these things.</p>
+        <h2 style="font-size: 15px;">Gratitude</h2>
+        <p>Always being aware and grateful for any opportunity given my way.</p>
+        <h2 style="font-size: 15px ;">Leadership</h2>
+        <p>I am the type of a leader who encourages and considerates  my member’s strengths and weaknesses, organizes all the needed activities to be done, and is overall always there for my groupmates.</p>
+        <h2 style="font-size: 15px;">Judgement</h2>
+        <p>	I am a judgemental person, as I tend to overthink and overanalyze things, taking any evidence or ideas I have with a grain of salt, until I make my decisions fairly.</p>
+        <h2 style="font-size: 15px;">Curiosity</h2>
+        <p>I am naturally curious with things I take interest in, so I always take every information within those interests very passionately.</p>
+    </div>  
+
+    <div id="learning" style="display:none;">
+        <h1>LEARNING STYLE</h1>
+        <p>I’m a Visual Learner! Well according to my learning style test per se, so I tend to understand something better when it is visually shown. Personally I still struggle with just showing myself visually, so this paired with detailed information, I ensure that I will understand the information very well. There are other times that I enjoy visualizing certain informations even if it’s not shown visually with a picture or a chart, but I have a hard time interpreting it with just words, so I interpret it visually too by drawing!</p>  
+    </div>
+
+    <div id="goals" style="display:none;">
+    </div>
+
+    <div id="growth" style="display:none;">
+        <h1>GROWTH</h1>
+        <div class="image-container">
+            <img src="SPECIFIC.png" alt="Growth Chart" style="max-width: 55%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+            <img src="MEASURABLE.png" alt="Growth Chart" style="max-width: 55%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+            <img src="ATTAINABLE.png" alt="Growth Chart" style="max-width: 55%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+            <img src="RELEVANT.png" alt="Growth Chart" style="max-width: 55%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+            <img src="TIMEBOUND.png" alt="Growth Chart" style="max-width: 55%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+    </div>
+
+    <div id="values" style="display:none;">
+        <h1>PERSONAL VALUES</h1>
+        <p>Living in poverty as a child, dreams are very hard to reach. Knowing all my relatives go for a realistic approach in continuing life - just get whatever job you’ll land on - I try to follow their footsteps as well. Even now I doubt my career choice, whether I should go with my parent’s dreams for me: an engineer or an architect, or what others want me to be: working in offices or low paying jobs. But I always come back to my safespace, I always choose art over anything, I always choose to share my creations with everyone.</p>
+        <p>Because no matter how scary and uncertain the future is, I’ll never let go of my passion, my “hobby” , my safe space that’s always there with me even as a child. That Art isn’t just a fleeting hobby, it’s the one thing that helps me through tough times, helps me interpret my thoughts and feelings into a single picture, that I can be myself without anyone telling me what to do.</p>
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script src="topwhinysamoyedphainon.js"></script>
+</html>

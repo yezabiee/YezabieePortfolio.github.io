@@ -1,0 +1,174 @@
+    body {
+        background-image: url("bg.jpg");
+      
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+
+    }
+    /* Top Navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      background: #A0A786;
+      padding: 1rem 2rem;
+      color: white;
+      font-weight: bold;
+      gap: 3rem;
+    }
+
+    .navbar a {
+      color: rgb(217, 234, 220);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .navbar a:hover {
+      background: rgba(81, 101, 76, 0.874);
+    }
+
+    /* Main layout */
+    .container {
+      display: flex;
+      align-items: flex-start;
+      padding: 2rem;
+      gap: 20px;
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 220px;
+      min-width: 220px;
+      flex-shrink: 0;
+      background: rgb(255, 255, 255);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(69, 103, 79, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      overflow: visible;
+    }
+    
+    .pfp-box {
+    text-align: center;
+    padding: 20px 10px;
+}
+    
+    .pfp {
+      width: 150px;
+      height: 150px;
+      background: #e4e1e1;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;;
+    }
+
+
+    /* Main Content */
+    .content {
+      flex-grow: 1;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 0;
+    }
+
+    .content h1 {
+      margin-top: 0;
+      flex: 1;
+    }
+    
+    p {
+  text-align: justify;
+  text-indent: 30px;
+}
+
+.more-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+/* SubmenuPanel */
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%; /* appears to the RIGHT */
+    width: 300px;
+    background: #A0A786;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    display: none;                     /* hidden by default */
+    overflow: visible;
+    z-index: 9999;
+    margin-left: 10px; /* Add some spacing from the button */
+}
+
+/* Show the submenu on hover */
+.more-wrapper:hover .submenu {
+    display: block;
+}
+
+/* Submenu buttons - make them same size as main buttons */
+.submenu button {
+    background: #A0A786;
+    width: calc(100% - 0.8rem);
+    padding: 24px 20px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 0.4rem;
+    box-sizing: border-box;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
+}
+
+.submenu button:hover {
+    background: #7c8268;
+    padding-left: 8px;
+}
+
+/* MAIN SIDEBAR BUTTON STYLE (same as before) */
+.sidebar button {
+    background: #A0A786; /* BUTTON COLORMEOW  */
+    width: 100%;
+    padding: 24px 20px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;       /* text color for contrast */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-sizing: border-box;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 0.4rem 0;
+    outline: none;
+    border: none;
+}
+
+
+.sidebar button:hover {
+    background: #7c8268; /* darker green on hover */
+    padding-left: 28px;
+}

@@ -18,6 +18,16 @@ function showTab(tab) {
 function toggleSubmenu(btn) {
   const parent = btn.closest('.more-wrapper');
   const submenu = parent ? parent.querySelector('.submenu') : null;
+  
+  // Close all other submenus
+  const allSubmenus = document.querySelectorAll('.submenu');
+  allSubmenus.forEach(menu => {
+    if (menu !== submenu) {
+      menu.style.display = 'none';
+    }
+  });
+  
+  // Toggle current submenu
   if (submenu) {
     submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
   }

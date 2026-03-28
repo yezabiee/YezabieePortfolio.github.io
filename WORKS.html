@@ -6,8 +6,8 @@
   <title>Prototype Layout</title>
   <link rel="stylesheet" href="bottommydeisavior.css" />
 </head>
-<body>
-  <div class="wrapper" style="width: 70%; max-width: 1000px; margin: 100px auto; background: #fffdfb; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); overflow: visible;">
+<body class="works-page">
+  <div class="wrapper works-page-shell">
 
 
   <!-- Top Navigation -->
@@ -27,14 +27,12 @@
       <div class="more-wrapper">
          <button onclick="toggleSubmenu(this)" class="more-btn">ORIGINAL ILLUSTRATIONS</button>
          <div class="submenu">
-              <button onclick="showTab('trad')">TRADITIONAL</button>
               <button onclick="showTab('dig')">DIGITAL</button>
           </div>
         </div>
         <div class="more-wrapper">
             <button onclick="toggleSubmenu(this)" class="more-btn">FANARTS</button>
             <div class="submenu">
-                <button onclick="showTab('traditional')">TRADITIONAL</button>
                 <button onclick="showTab('digital')">DIGITAL</button>
             </div>
         </div>
@@ -43,13 +41,13 @@
             <button onclick="toggleSubmenu(this)" class="more-btn">OTHER NOTABLE WORKS</button>
             <div class="submenu">
                 <button onclick="showTab('cooche')">CROCHET PRODUCTS</button>
-                <button onclick="showTab('miscer')">MISCELLANEOUS</button>
+                <button onclick="showTab('miscer')">MA105</button>
             </div>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div class="content">
+    <div class="content works-content-scroll">
         <div id="welcome">
         </div>
 
@@ -57,42 +55,74 @@
     <div id="trad" style="display:none;">
     </div>
 
-    <div id="dig" style="display:none;">
-      <img src="Unknamed OC_20240825003928.jpg" alt="Digital Original Compilation" style="max-width: 40%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-      <img src="Frog but it only has back legs.jpg" alt="Digital Original Compilation 2" style="max-width: 40%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+    <div id="dig" style="display:none;" class="work-thumb-grid">
+      <button type="button" class="work-thumb" data-title="Unnamed OC" data-desc="Describe this piece here.">
+        <img src="Unknamed OC_20240825003928.jpg" alt="Digital Original Compilation" />
+      </button>
+      <button type="button" class="work-thumb" data-title="Frog study" data-desc="Describe this piece here.">
+        <img src="Frog but it only has back legs.jpg" alt="Digital Original Compilation 2" />
+      </button>
     </div>
 
-     <div id="traditional" style="display:none;">
-    </div>
-
-    <div id="digital" style="display:none;">
-      <img src="Sapphic Adult SSMY_20240817222819.jpg" alt="Digital Fanart Compilation" style="max-width: 40%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-      <img src="Scarian.png" alt="Digital Original Compilation 2" style="max-width: 40%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-      <img src="Pomme Head Sticker.png" alt="Digital Original Compilation 3" style="max-width: 40%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-      <img src="Richas Head Sticker.png" alt="Digital Original Compilation 4" style="max-width: 40%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-    </div>
-
-    <div id="animations" style="display:none;">
-      <div class="image-container">
-        <img src="Tetogif.gif" alt="Sample Animation" style="max-width: 60%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-        <video controls style="max-width: 60%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <div id="animations" style="display:none;" class="work-thumb-grid">
+      <button type="button" class="work-thumb" data-title="Teto GIF" data-desc="Describe this animation here.">
+        <img src="Tetogif.gif" alt="Sample Animation" />
+      </button>
+      <button type="button" class="work-thumb work-thumb--video" data-title="Floating" data-desc="Describe this video here.">
+        <video preload="metadata" muted playsinline>
           <source src="Floating.mp4" type="video/mp4">
+        </video>
+      </button>
+    </div>
+
+    <div id="cooche" style="display:none;" class="work-thumb-grid">
+      <button type="button" class="work-thumb" data-title="Sunflower bouquet" data-desc="Describe this crochet piece here.">
+        <img src="sunflwr bq crochet.jpg" alt="Crochet Product 1" />
+      </button>
+      <button type="button" class="work-thumb" data-title="Jellyfish" data-desc="Describe this crochet piece here.">
+        <img src="Jellyfish.jpg" alt="Crochet Product 2" />
+      </button>
+      <button type="button" class="work-thumb" data-title="Scrunchies" data-desc="Describe this crochet piece here.">
+        <img src="scrunchies.jpg" alt="Crochet Product 3" />
+      </button>
+      <button type="button" class="work-thumb" data-title="Sunflower" data-desc="Describe this crochet piece here.">
+        <img src="sunflwr.jpg" alt="Crochet Product 4" />
+      </button>
+    </div>
+    
+    <div id="miscer" style="display:none;" class="work-thumb-grid">
+      <button type="button" class="work-thumb" data-title="Cyrene cover" data-desc="A character from Honkai Star Rail named Cyrene as a magazine cover.">
+        <img src="cyrene cover.jpg" alt="Miscellaneous Work" />
+      </button>
+      <button type="button" class="work-thumb" data-title="Logo mockup" data-desc="Tote bag mockup for my personal logo I designed.">
+        <img src="logo mockup.JPG" alt="Logo mockup" />
+      </button>
+      <button type="button" class="work-thumb" data-title="Grapes" data-desc="Grapes made in Adobe Illustrator.">
+        <img src="grapes.png" alt="Grapes illustration" />
+      <button type="button" class="work-thumb" data-title="Heart poster" data-desc="A blood donation poster that I redesigned.">
+        <img src="heartposter.jpg" alt="Heart poster" />
+       <button type="button" class="work-thumb" data-title="Vision board" data-desc="Vision board of all the things I cherish the most.">
+        <img src="visionboard.jpg" alt="Vision board" />
+      </button>
+      </button>
+      </button>
+    </div>
+</div>
+</div>
+</div>
+
+  <div id="work-detail" class="work-detail" aria-hidden="true">
+    <div class="work-detail__backdrop" data-work-detail-close></div>
+    <div class="work-detail__panel" role="dialog" aria-modal="true" aria-labelledby="work-detail-title">
+      <button type="button" class="work-detail__close" aria-label="Close" data-work-detail-close>&times;</button>
+      <div class="work-detail__media"></div>
+      <div class="work-detail__copy">
+        <h2 id="work-detail-title" class="work-detail__title"></h2>
+        <p class="work-detail__desc"></p>
+      </div>
     </div>
   </div>
 
-    <div id="cooche" style="display:none;">
-      <img src="sunflwr bq crochet.jpg" alt="Crochet Product 1" style="max-width: 30%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-      <img src="Jellyfish.jpg" alt="Crochet Product 2" style="max-width: 30%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-      <img src="scrunchies.jpg" alt="Crochet Product 3" style="max-width: 30%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-      <img src="sunflwr.jpg" alt="Crochet Product 4" style="max-width: 30%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-    </div>
-    
-    <div id="miscer" style="display:none;">
-      <img src="coffe mobile AyesaMnss.jpg" alt="Miscellaneous Work 2" style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-    </div>
-</div>
-</div>
-</div>
 </body>
 <script src="topwhinysamoyedphainon.js"></script>
 </html>
